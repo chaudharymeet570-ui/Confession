@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Shreeya ❤️</title>
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:"Trebuchet MS",Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:
+        radial-gradient(circle at top,#7d176d,transparent 45%),
+        linear-gradient(135deg,#160018,#3b0034,#0d000f);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    overflow:hidden;
+    cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="%23ff4f9a" stroke="%23ffffff" stroke-width="1" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') 14 14, auto;
+}
+
+/* ================= CARD ================= */
+
+.card{
+    width:100%;
+    max-width:650px;
+    max-height:92vh;
+    overflow-y:auto;
+    padding:38px 25px;
+    text-align:center;
+    background:rgba(255,255,255,.09);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:28px;
+    box-shadow:0 0 60px rgba(255,50,160,.25);
+    z-index:5;
+    animation:appear 1s ease;
+}
+
+@keyframes appear{
+    from{ opacity:0; transform:translateY(30px) scale(.95); }
+    to{ opacity:1; transform:translateY(0) scale(1); }
+}
+
+/* ================= PROGRESS BAR ================= */
+
+#progress-bar{
+    position:fixed;
+    top:0;
+    left:0;
+    height:4px;
+    width:0%;
+    background:linear-gradient(90deg,#ff4f9a,#ff75b5);
+    box-shadow:0 0 8px rgba(255,80,150,.6);
+    z-index:200;
+    transition:width .1s ease;
+}
+
+/* ================= HEADER ================= */
+
+.small{
+    color:#ff9bc7;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+h1{
+    margin-top:12px;
+    font-size:clamp(50px,14vw,85px);
+    background:linear-gradient(90deg,#ff4f9a,#ffffff,#ff75b5,#ff4f9a);
+    background-size:300% auto;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    filter:drop-shadow(0 0 15px rgba(255,70,160,.6));
+    animation:shimmer 5s ease-in-out infinite;
+}
+
+.beat{
+    display:inline-block;
+    animation:heartbeat 1.6s ease-in-out infinite;
+}
+
+.subtitle{
+    color:#ffd4e7;
+    margin-top:5px;
+    font-size:16px;
+}
+
+.line{
+    width:75px;
+    height:3px;
+    background:#ff4f9a;
+    margin:20px auto;
+    border-radius:10px;
+}
+
+/* ================= TEXT ================= */
+
+.message{
+    color:#f6dce9;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.highlight{
+    color:#ff83b9;
+    font-weight:bold;
+}
+
+/* ================= SCHOOL BOX ================= */
+
+.school-box{
+    margin-top:27px;
+    padding:21px;
+    text-align:left;
+    background:rgba(255,255,255,.055);
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.school-box h2{
+    text-align:center;
+    color:#ff91c4;
+    margin-bottom:17px;
+}
+
+.school-box p{
+    margin:12px 0;
+    line-height:1.7;
+    color:#f5dce9;
+}
+
+/* ================= NOTE ================= */
+
+.note{
+    position:relative;
+    margin-top:23px;
+    padding:21px;
+    background:#fff3fa;
+    color:#46122f;
+    border-radius:8px;
+    transform:rotate(-1deg);
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.note::before,
+.note::after{
+    content:"";
+    position:absolute;
+    top:-11px;
+    width:46px;
+    height:18px;
+    background:rgba(255,255,255,.6);
+    box-shadow:0 2px 4px rgba(0,0,0,.2);
+}
+
+.note::before{ left:22px; transform:rotate(-8deg); }
+.note::after{ right:22px; transform:rotate(7deg); }
+
+.note h3{
+    margin-bottom:12px;
+}
+
+/* ================= CONFESSION ================= */
+
+.confession{
+    margin-top:27px;
+    padding:23px;
+    background:rgba(255,70,150,.08);
+    border-radius:20px;
+    border:1px solid rgba(255,100,180,.1);
+}
+
+.confession h2{
+    color:#ff91c4;
+    margin-bottom:15px;
+}
+
+.confession p{
+    color:#f5dce9;
+    line-height:1.8;
+    margin-bottom:12px;
+}
+
+/* ================= QUOTE CARD ================= */
+
+.quote-box{
+    position:relative;
+    margin-top:27px;
+    padding:26px 22px;
+    background:rgba(255,255,255,.055);
+    border-radius:20px;
+    border:1px dashed rgba(255,145,196,.4);
+}
+
+.quote-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ff9bc7;
+    margin-bottom:10px;
+}
+
+.quote-text{
+    font-size:18px;
+    font-style:italic;
+    line-height:1.7;
+    color:#ffe3f0;
+}
+
+/* ================= LITTLE DETAILS ================= */
+
+.details{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.detail{
+    padding:15px 10px;
+    background:rgba(255,255,255,.055);
+    border-radius:15px;
+    color:#f8ddeb;
+    font-size:14px;
+    line-height:1.5;
+    transition:transform .25s ease, background .25s ease;
+}
+
+.detail:hover{
+    transform:translateY(-5px) rotate(-1deg);
+    background:rgba(255,255,255,.1);
+}
+
+.detail b{
+    display:block;
+    color:#ff91c4;
+    margin-bottom:5px;
+}
+
+/* ================= QUESTION ================= */
+
+.question{
+    margin-top:32px;
+    font-size:27px;
+    font-weight:bold;
+    line-height:1.4;
+}
+
+/* ================= BUTTONS ================= */
+
+.buttons{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:24px;
+    min-height:70px;
+    margin-top:25px;
+}
+
+button{
+    padding:14px 29px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    touch-action:none;
+}
+
+#yes{
+    background:linear-gradient(135deg,#ff4f9a,#ff1479);
+    color:white;
+    box-shadow:0 0 25px rgba(255,50,140,.5);
+    transition:.2s;
+    animation:pulseGlow 2.4s ease-in-out infinite;
+}
+
+#yes:hover{
+    transform:scale(1.1);
+}
+
+#no{
+    /* deliberately plain/thrown-together looking next to the fancy yes button */
+    position:relative;
+    background:#d6d6d6;
+    color:#555;
+    border:2px dashed #999;
+    border-radius:6px;
+    font-weight:normal;
+    box-shadow:none;
+    transform:rotate(-2deg);
+    transition:left .1s ease, top .1s ease, transform .1s ease;
+}
+
+/* ================= RESPONSE ================= */
+
+#response{
+    min-height:40px;
+    margin-top:10px;
+    color:#ff9ac7;
+    font-size:19px;
+    font-weight:bold;
+}
+
+/* ================= SECRET ================= */
+
+#secret{
+    display:none;
+    margin-top:20px;
+    padding:25px;
+    background:rgba(255,70,150,.12);
+    border-radius:20px;
+    animation:appear .7s ease;
+}
+
+#secret h2{
+    color:#ff91c4;
+    margin-bottom:13px;
+}
+
+#secret p{
+    line-height:1.8;
+    color:#f6dce9;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    margin-top:27px;
+    color:#888;
+    font-size:12px;
+}
+
+/* ================= FLOATING HEARTS ================= */
+
+.heart{
+    position:fixed;
+    bottom:-40px;
+    color:#ff5ca8;
+    pointer-events:none;
+    animation:float 7s linear infinite;
+}
+
+@keyframes float{
+    0%{ transform:translateY(0) rotate(0deg); opacity:0; }
+    20%{ opacity:1; }
+    100%{ transform:translateY(-110vh) rotate(30deg); opacity:0; }
+}
+
+/* ================= SPARKLES ================= */
+
+.sparkle{
+    position:fixed;
+    top:-30px;
+    font-size:14px;
+    color:#ffe6b3;
+    pointer-events:none;
+    animation:sparkle-fall 6s linear infinite;
+}
+
+@keyframes sparkle-fall{
+    0%{ transform:translateY(0) rotate(0deg) scale(.5); opacity:0; }
+    12%{ opacity:1; }
+    50%{ transform:translateY(55vh) rotate(180deg) scale(1); }
+    100%{ transform:translateY(115vh) rotate(360deg) scale(.5); opacity:0; }
+}
+
+/* ================= EXTRA MOTION ================= */
+
+@keyframes shimmer{
+    0%,100%{ background-position:0% 50%; }
+    50%{ background-position:100% 50%; }
+}
+
+@keyframes heartbeat{
+    0%,100%{ transform:scale(1); }
+    15%{ transform:scale(1.25); }
+    30%{ transform:scale(1); }
+    45%{ transform:scale(1.2); }
+    60%{ transform:scale(1); }
+}
+
+@keyframes pulseGlow{
+    0%,100%{ box-shadow:0 0 25px rgba(255,50,140,.5); }
+    50%{ box-shadow:0 0 42px rgba(255,70,150,.85); }
+}
+
+/* ================= SCROLL REVEAL ================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity .7s ease, transform .7s ease;
+}
+
+.reveal.in-view{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+@media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:500px){
+    .card{ padding:30px 18px; }
+    .details{ grid-template-columns:1fr; }
+    .question{ font-size:24px; }
+}
+
+</style>
+</head>
+<body>
+
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+
+<div id="progress-bar"></div>
+
+<!-- FLOATING HEARTS -->
+<div class="heart" style="left:5%;animation-delay:0s;">♥</div>
+<div class="heart" style="left:15%;animation-delay:2s;">♡</div>
+<div class="heart" style="left:30%;animation-delay:4s;">♥</div>
+<div class="heart" style="left:45%;animation-delay:1s;">♡</div>
+<div class="heart" style="left:60%;animation-delay:3s;">♥</div>
+<div class="heart" style="left:75%;animation-delay:5s;">♡</div>
+<div class="heart" style="left:90%;animation-delay:2s;">♥</div>
+
+<!-- FLOATING SPARKLES -->
+<div class="sparkle" style="left:10%;animation-delay:.5s;">✨</div>
+<div class="sparkle" style="left:35%;animation-delay:2.5s;">✨</div>
+<div class="sparkle" style="left:55%;animation-delay:4.5s;">✨</div>
+<div class="sparkle" style="left:70%;animation-delay:1.5s;">✨</div>
+<div class="sparkle" style="left:85%;animation-delay:3.5s;">✨</div>
+
+<div class="card">
+
+<!-- HEADER -->
+<div class="small">A Little Confession For You</div>
+<h1>Shreeya <span class="beat">❤️</span></h1>
+<div class="subtitle">Yes... I made an entire website instead of just saying "hi." 😭</div>
+<div class="line"></div>
+
+<!-- INTRO -->
+<p class="message">
+Okay...
+<br><br>
+I'm going to be honest with you.
+<br><br>
+We haven't actually talked that much.
+We've talked a little at school,
+and a little on Instagram...
+<br><br>
+But somehow,
+<span class="highlight">you still managed to become someone I think about a lot.</span>
+❤️
+</p>
+
+<!-- SCHOOL BOX -->
+<div class="school-box reveal">
+<h2>Things I Probably Shouldn't Admit 😂</h2>
+<p>🏫 <b>Coming to school:</b> completely normal.</p>
+<p>👀 <b>Then seeing you:</b> okay... suddenly I'm paying attention.</p>
+<p>🧠 <b>My brain:</b> "Act normal."</p>
+<p>🧠 <b>Also my brain:</b> "Wait... is Shreeya here?" 😭</p>
+<p>😂 <b>Me:</b> "She Looks so cool in school dress"</p>
+<p>💻 <b>Also me:</b> "Let's build a whole website."</p>
+</div>
+
+<!-- FUNNY NOTICE -->
+<div class="note reveal">
+<h3>📄 Extremely Serious School Notice</h3>
+<p>
+<b>Subject:</b> A confession that took way too much courage. 😭 (LOL)
+<br><br>
+After conducting extensive research and keep looking at your profile.
+(which mostly consisted of overthinking 😭),
+I have reached one very important conclusion:
+<br><br>
+<strong>I love you. ❤️</strong>
+<br><br>
+Not because we've known each other forever.
+Not because we have some dramatic movie story.
+Just because somewhere along the way,
+you became someone I genuinely started caring about. even tho i really thought about why i liked you but yk even i didn't knew when I did.
+<br><br>
+😭 Please consider this notice before judging the person who made it. (pretty please 🥺)
+</p>
+</div>
+
+<!-- DETAILS -->
+<div class="details reveal">
+<div class="detail"><b>🏫 School</b>Always waking up just to see you, for your appearance, made Mondays even better 😭.</div>
+<div class="detail"><b>❤️ YOU ❤️</b>Yes, Ummmmm... i dont even need to talk how much cool you r</div>
+<div class="detail"><b>Me</b>Loser and a Dumbass whose in love with u. 😭</div>
+<div class="detail"><b>🧠 My Brain</b>90% normal thoughts. 10%: "Shreeya..." 😭</div>
+</div>
+
+<!-- HONEST CONFESSION -->
+<div class="confession reveal">
+<h2>Okay, Seriously... ❤️</h2>
+<p>I know we're not super close yet. And I'm not going to pretend we are.</p>
+<p>I just genuinely like you. Actually... <span class="highlight">I've started falling for you.</span></p>
+<p>I love your vibe, I loved your hair,eyes,eyebrows everything about you. and I like the little moments when I get to see or talk to you.</p>
+<p>Maybe it's a little random. Maybe this website is WAY more effort than necessary. 😂 But I wanted to be honest instead of keeping everything in my head.</p>
+</div>
+
+<!-- QUOTE -->
+<div class="quote-box reveal">
+<div class="quote-label">A Very Scientific Fact</div>
+<p class="quote-text">"Black hole is the second strongest gravitational pull in the universe, first is your eyes 😭 ❤️"</p>
+</div>
+
+<!-- FINAL MESSAGE -->
+<p class="message" style="margin-top:25px;">
+I'm not expecting a movie-style answer.
+<br><br>
+No dramatic background music.
+<br>No slow-motion school corridor scene.
+<br>No principal suddenly appearing to approve this. 😂
+<br><br>
+I just want an honest answer from you.
+<br><br>
+Because even if this took me forever to say...
+<span class="highlight">I really wanted you to know how I feel.</span> ❤️
+</p>
+
+<!-- QUESTION -->
+<div class="question reveal">
+So...
+<br><br>
+Shreeya,
+<br>Will you give me a chance? <span class="beat">❤️</span>
+</div>
+
+<!-- BUTTONS -->
+<div class="buttons">
+<button id="yes" onclick="yesClicked()">YES ❤️</button>
+<button id="no">NO 😭</button>
+</div>
+
+<div id="response"></div>
+
+<!-- YES RESULT -->
+<div id="secret">
+<h2>WAIT... YOU SAID YES?! 😭❤️</h2>
+<p>
+Okay...
+<br><br>
+I'm actually smiling at my screen like an idiot right now. 😂
+<br><br>
+Thank you for giving me a chance. ❤️
+<br><br>
+I know we haven't talked that much yet... so let's start simple.
+<br><br>
+<strong>One conversation. One "hi". And maybe a lot more memories from there. ✨</strong>
+<br><br>
+No rushing. No pressure. Let's just get to know each other and see where this goes. ❤️
+<br><br>
+And honestly... I'm really glad I finally told you.
+</p>
+</div>
+
+<div class="footer">Made with HTML, courage, and approximately 47 overthinking thoughts of you. 😂❤️</div>
+
+</div>
+
+<script>
+
+/* ================= PROGRESS BAR ================= */
+
+const progressBar = document.getElementById("progress-bar");
+const cardEl = document.querySelector(".card");
+
+function updateProgress(){
+    const scrollable = cardEl.scrollHeight - cardEl.clientHeight;
+    const percent = scrollable > 0 ? (cardEl.scrollTop / scrollable) * 100 : 0;
+    progressBar.style.width = percent + "%";
+}
+
+cardEl.addEventListener("scroll", updateProgress);
+window.addEventListener("resize", updateProgress);
+updateProgress();
+
+/* ================= SCROLL REVEAL ================= */
+
+const revealEls = document.querySelectorAll(".reveal");
+
+if("IntersectionObserver" in window){
+    const revealObserver = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+            if(entry.isIntersecting){
+                entry.target.classList.add("in-view");
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold:0.2 });
+
+    revealEls.forEach(function(el){ revealObserver.observe(el); });
+} else {
+    revealEls.forEach(function(el){ el.classList.add("in-view"); });
+}
+
+/* ================= NO BUTTON ================= */
+
+const noButton = document.getElementById("no");
+let moving = false;
+let attempts = 0;
+
+/* Small dodge: jumps just far enough to slip away, then stays
+   in roughly the same neighborhood — never teleports across
+   the whole screen. */
+function escapeButton(){
+
+    if(moving) return;
+    moving = true;
+    attempts++;
+
+    const rect = noButton.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+
+    // The card uses backdrop-filter, which makes it the
+    // "containing block" for any position:fixed element inside
+    // it — so fixed left/top would be measured from the card,
+    // not the real screen. Move the button out to <body> the
+    // first time it dodges, landing exactly where it already
+    // is, so there's no visible jump.
+    if(noButton.parentElement !== document.body){
+        document.body.appendChild(noButton);
+        noButton.style.margin = "0";
+        noButton.style.zIndex = "50";
+        noButton.style.position = "fixed";
+        noButton.style.left = rect.left + "px";
+        noButton.style.top = rect.top + "px";
+    }
+
+    const dodge = 70;   // max px it hops in any direction
+    const margin = 10;  // keep it fully on-screen
+
+    let x = rect.left + (Math.random() * dodge * 2 - dodge);
+    let y = rect.top + (Math.random() * dodge * 2 - dodge);
+
+    const maxX = window.innerWidth - width - margin;
+    const maxY = window.innerHeight - height - margin;
+
+    x = Math.min(Math.max(x, margin), maxX);
+    y = Math.min(Math.max(y, margin), maxY);
+
+    noButton.style.position = "fixed";
+    noButton.style.left = x + "px";
+    noButton.style.top = y + "px";
+    noButton.style.transform = "rotate(" + (Math.random()*24-12) + "deg)";
+    noButton.innerText = randomMessage();
+
+    setTimeout(() => { moving = false; }, 100);
+}
+
+/* ================= FUNNY MESSAGES ================= */
+
+function randomMessage(){
+    const messages = [
+        "WAIT 😭","NOT YET 😂","CATCH ME 🏃","TOO FAST 😭","NOPE 😂",
+        "THINK AGAIN 🥹","PLEASE 😭","ARE YOU SURE? 👀","ONE CHANCE? ❤️",
+        "DON'T DO THIS 😭","I'M RUNNING 🏃","WHY 😭","ALMOST 😂",
+        "NICE TRY 😎","NO BUTTON.exe 💀"
+    ];
+    return messages[Math.floor(Math.random() * messages.length)];
+}
+
+/* ================= DESKTOP ================= */
+
+noButton.addEventListener("mouseenter", escapeButton);
+
+/* ================= MOBILE ================= */
+
+noButton.addEventListener("touchstart", function(event){
+    event.preventDefault();
+    escapeButton();
+}, { passive:false });
+
+/* ================= POINTER ================= */
+
+document.addEventListener("pointermove", function(event){
+    const rect = noButton.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const dx = event.clientX - centerX;
+    const dy = event.clientY - centerY;
+    const distance = Math.sqrt(dx*dx + dy*dy);
+
+    if(distance < 100){
+        escapeButton();
+    }
+});
+
+/* ================= YES ================= */
+
+function yesClicked(){
+    document.getElementById("response").innerHTML = "Okay... you just made my entire day. 😭❤️";
+    document.getElementById("secret").style.display = "block";
+    document.getElementById("yes").innerHTML = "❤️ YAY ❤️";
+    document.getElementById("yes").disabled = true;
+    createHearts();
+}
+
+/* ================= HEART CELEBRATION ================= */
+
+function createHearts(){
+    for(let i=0; i<40; i++){
+        const heart = document.createElement("div");
+        heart.innerHTML = "❤️";
+        heart.style.position = "fixed";
+        heart.style.left = Math.random()*100 + "vw";
+        heart.style.bottom = "-30px";
+        heart.style.fontSize = (15 + Math.random()*25) + "px";
+        heart.style.zIndex = "100";
+        document.body.appendChild(heart);
+
+        heart.animate([
+            { transform:"translateY(0) scale(.5)", opacity:0 },
+            { transform:"translateY(-100vh) scale(1.4)", opacity:1 }
+        ], {
+            duration: 2500 + Math.random()*2500,
+            easing: "ease-out"
+        });
+
+        setTimeout(() => heart.remove(), 5500);
+    }
+}
+
+</script>
+</body>
+</html>
